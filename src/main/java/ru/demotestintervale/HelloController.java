@@ -29,5 +29,9 @@ public class HelloController {
             return new  ResponseEntity<Product>(HttpStatus.NOT_FOUND);
         }
     }
+    @GetMapping("/cooki")
+    public String cookhello(@CookieValue(name = "color",defaultValue = "Hello")String fooCookie){
+        return " hello cooki " + fooCookie ;
+    }
 
 }
